@@ -18,7 +18,7 @@ function setRandomBorders () {
 
     let borderTopLeft = Math.floor(Math.random()*50);
 
-    let  borderTopRight= Math.floor(Math.random()*50);
+    let borderTopRight= Math.floor(Math.random()*50);
 
     let borderBottomLeft = Math.floor(Math.random()*50);
 
@@ -36,20 +36,35 @@ function setRandomBorders () {
 
 function setRandomDimensions () {
 
-    let width = (50 + Math.floor(Math.random()*400)) + "px";
+    width = (50 + Math.floor(Math.random()*400));
 
-    let height = (50 + Math.floor(Math.random()*400)) + "px";
+    height = (50 + Math.floor(Math.random()*400));
 
-    document.getElementById("shape-div").style.width = width;
+    document.getElementById("shape-div").style.width = width + "px";
 
-    document.getElementById("shape-div").style.height = width;
+    document.getElementById("shape-div").style.height = height + "px";
 
-    console.log(width, height);
+    return(width, height);
 
+}
+
+function setRandomPosition () {
+
+    let topPosition = (Math.floor(Math.random()*window.innerHeight))-height;
+
+    let leftPosition = Math.floor(Math.random()*window.innerWidth)-width;
+
+    document.getElementById("shape-div").style.position = "relative";
+
+    document.getElementById("shape-div").style.top = height;
+
+    document.getElementById("shape-div").style.left = width;
 }
 
 setRandomBackgroundColor ()
 
 setRandomBorders ();
 
-setRandomDimensions ()
+setRandomDimensions ();
+
+setRandomPosition ();
