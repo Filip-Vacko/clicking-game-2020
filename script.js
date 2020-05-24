@@ -1,14 +1,18 @@
-let letters = "0123456789ABCDEF";
+function setRandomBackgroundColor () {
 
-let color = "#";
+    let letters = "0123456789ABCDEF";
 
-for (let i = 0; i <6; i++) {
+    let color = "#";
 
-    color+= letters[Math.floor(Math.random() * 16)];
+    for (let i = 0; i <6; i++) {
+
+        color+= letters[Math.floor(Math.random() * 16)];
+
+    }
+
+    document.getElementById("shape-div").style.backgroundColor = color;
 
 }
-
-document.getElementById("shape-div").style.backgroundColor = color;
 
 function setRandomBorders () {
 
@@ -43,6 +47,8 @@ function setRandomDimensions () {
     console.log(width, height);
 
 }
+
+setRandomBackgroundColor ()
 
 setRandomBorders ();
 
