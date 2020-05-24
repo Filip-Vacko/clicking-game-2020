@@ -56,9 +56,9 @@ function setRandomPosition () {
 
     document.getElementById("shape-div").style.position = "relative";
 
-    document.getElementById("shape-div").style.top = height;
+    document.getElementById("shape-div").style.top = topPosition;
 
-    document.getElementById("shape-div").style.left = width;
+    document.getElementById("shape-div").style.left = leftPosition;
 }
 
 setRandomBackgroundColor ()
