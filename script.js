@@ -9,3 +9,25 @@ for (let i = 0; i <6; i++) {
 }
 
 document.getElementById("shape-div").style.backgroundColor = color;
+
+function setRandomBorders () {
+
+    let borderTopLeft = Math.floor(Math.random()*50);
+
+    let  borderTopRight= Math.floor(Math.random()*50);
+
+    let borderBottomLeft = Math.floor(Math.random()*50);
+
+    let borderBottomRight = Math.floor(Math.random()*50);
+
+    document.getElementById("shape-div").style.borderTopLeftRadius= borderTopLeft + "%";
+
+    document.getElementById("shape-div").style.borderTopRightRadius= borderTopRight + "%";
+
+    document.getElementById("shape-div").style.borderBottomLeftRadius= borderBottomLeft + "%";
+
+    document.getElementById("shape-div").style.borderBottomRightRadius= borderBottomRight + "%"; 
+
+}
+
+setRandomBorders ();
