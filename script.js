@@ -1,25 +1,11 @@
-function getRandomColor () {
-   
-    let letters = "0123456789ABCDEF";
+let letters = "0123456789ABCDEF";
 
-    let color = "#";
+let color = "#";
 
-    for (let i = 0; i <6; i++) {
+for (let i = 0; i <6; i++) {
 
-        color+= letters[Math.floor(Math.random() * 16)];
-
-    }
-
-    document.getElementById("shape-div").style.backgroundColor = color;
+    color+= letters[Math.floor(Math.random() * 16)];
 
 }
 
-getRandomColor ();
-
-
-
-
-
-
-
-
+document.getElementById("shape-div").style.backgroundColor = color;
