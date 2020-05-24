@@ -30,4 +30,20 @@ function setRandomBorders () {
 
 }
 
+function setRandomDimensions () {
+
+    let width = (50 + Math.floor(Math.random()*400)) + "px";
+
+    let height = (50 + Math.floor(Math.random()*400)) + "px";
+
+    document.getElementById("shape-div").style.width = width;
+
+    document.getElementById("shape-div").style.height = width;
+
+    console.log(width, height);
+
+}
+
 setRandomBorders ();
+
+setRandomDimensions ()
