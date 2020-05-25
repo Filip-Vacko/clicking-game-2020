@@ -1,3 +1,11 @@
+'use strict';
+
+let width = 0;
+
+let height = 0;
+
+let startTime = 0;
+
 function setRandomBackgroundColor () {
 
     let letters = "0123456789ABCDEF";
@@ -44,8 +52,6 @@ function setRandomDimensions () {
 
     document.getElementById("shape-div").style.height = height + "px";
 
-    return(width, height);
-
 }
 
 function setRandomPosition () {
@@ -59,6 +65,7 @@ function setRandomPosition () {
     document.getElementById("shape-div").style.top = topPosition;
 
     document.getElementById("shape-div").style.left = leftPosition;
+    
 }
 
 function startGame () {
