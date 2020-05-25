@@ -73,8 +73,33 @@ function startGame () {
 
 }
 
+function startTimer() {
+
+    startTime = new Date();
+
+}
+
+function endTimer() {
+
+    let endTime = new Date ();
+
+    let timeDiff = endTime - startTime;
+
+    let seconds = timeDiff/1000;
+
+    document.getElementById("time-to-click").innerHTML = seconds;
+
+}
+
 document.getElementById("start-game").onclick = function() {
 
     startGame();
+    startTimer();
 
-};
+}
+
+document.getElementById("shape-div").onclick = function() {
+
+    endTimer ();
+
+}
