@@ -31,3 +31,20 @@ button {
     background-color: #ededed;
 
 }
+
+#instructions-div {
+
+    font-size: 15px;
+    margin-bottom: 20px;
+    background-color: lightblue;
+    width: 900px;
+    margin: auto auto 20px auto;
+    padding-bottom: 7px;
+
+}
+
+#first-instructions-div {
+
+    margin-bottom: 7px;
+
+}
