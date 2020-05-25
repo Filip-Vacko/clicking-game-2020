@@ -119,7 +119,7 @@ document.getElementById("main-div").style.height = window.innerHeight;
 document.getElementById("start-game").onclick = function() {
 
     startGame();
-    
+
     startTimer();
 
 }
@@ -127,5 +127,15 @@ document.getElementById("start-game").onclick = function() {
 document.getElementById("shape-div").onclick = function() {
 
     endTimer ();
+
+    document.getElementById("shape-div").style.width = "0px";
+
+    setTimeout (function () {
+
+        startGame();
+    
+        startTimer();
+
+    }, (Math.random() *1000))
 
 }
