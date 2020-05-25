@@ -1,6 +1,33 @@
-#shape-div {
+body {
 
-    width: 100px;
-    height: 100px;
+    margin: 0px;
+
+}
+
+#main-div {
+
+    text-align: center;
+
+}
+
+#description-div {
+
+    height: 50px;
+
+}
+
+button {
+
+    margin: 5px;
+
+}
+
+#playground-div {
+
+    width: 900px;
+    height: 700px;
+    border: 1px solid black;
+    margin: 10px auto auto auto;
+    background-color: #ededed;
 
 }

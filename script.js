@@ -1,10 +1,10 @@
 'use strict';
 
-let width = 0;
+let startTime = 0;
 
 let height = 0;
 
-let startTime = 0;
+let width = 0;
 
 function setRandomBackgroundColor () {
 
@@ -56,9 +56,21 @@ function setRandomDimensions () {
 
 function setRandomPosition () {
 
-    let topPosition = (Math.floor(Math.random()*window.innerHeight))-height;
+    let topPosition = -1;
 
-    let leftPosition = Math.floor(Math.random()*window.innerWidth)-width;
+    let leftPosition = -1;
+
+    while (topPosition < 0) {
+
+        topPosition = Math.floor(Math.random()* 700) - height;
+
+    }
+
+    while (leftPosition < 0) {
+
+        leftPosition = Math.floor(Math.random()* 700) - width;
+
+    }
 
     document.getElementById("shape-div").style.position = "relative";
 
@@ -96,11 +108,18 @@ function endTimer() {
 
     document.getElementById("time-to-click").innerHTML = seconds;
 
+    document.getElementById("time-to-click").style.fontWeight = "bold";
+
 }
+
+document.getElementById("main-div").style.width = window.innerWidth;
+
+document.getElementById("main-div").style.height = window.innerHeight;
 
 document.getElementById("start-game").onclick = function() {
 
     startGame();
+    
     startTimer();
 
 }
