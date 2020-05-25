@@ -61,10 +61,20 @@ function setRandomPosition () {
     document.getElementById("shape-div").style.left = leftPosition;
 }
 
-setRandomBackgroundColor ()
+function startGame () {
 
-setRandomBorders ();
+    setRandomBackgroundColor ()
 
-setRandomDimensions ();
+    setRandomBorders ();
 
-setRandomPosition ();
+    setRandomDimensions ();
+
+    setRandomPosition ();
+
+}
+
+document.getElementById("start-game").onclick = function() {
+
+    startGame();
+
+};
