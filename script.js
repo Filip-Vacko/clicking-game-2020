@@ -52,13 +52,7 @@ function setRandomDimensions () {
 
         $("#shape-div").animate({
 
-           width: width + "px"
-
-        }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
-    
-        $("#shape-div").animate({
-
-           height: height + "px"
+           width: width + "px", height: height + "px"
 
         }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
 
@@ -88,15 +82,10 @@ function setRandomPosition () {
 
     $("#shape-div").animate({
 
-        top: topPosition
+        top: topPosition, left: leftPosition
 
      }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
-
-     $("#shape-div").animate({
-
-        left: leftPosition
-
-     }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
+     
 }
 
 function startGame () {
