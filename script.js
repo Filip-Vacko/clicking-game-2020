@@ -48,9 +48,21 @@ function setRandomDimensions () {
 
     height = (50 + Math.floor(Math.random()*400));
 
-    document.getElementById("shape-div").style.width = width + "px";
+    $(function () {
 
-    document.getElementById("shape-div").style.height = height + "px";
+        $("#shape-div").animate({
+
+           width: width + "px"
+
+        }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
+    
+        $("#shape-div").animate({
+
+           height: height + "px"
+
+        }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
+
+    });
 
 }
 
@@ -72,12 +84,19 @@ function setRandomPosition () {
 
     }
 
-    document.getElementById("shape-div").style.position = "relative";
+    $("#shape-div").css("position", "relative");
 
-    document.getElementById("shape-div").style.top = topPosition;
+    $("#shape-div").animate({
 
-    document.getElementById("shape-div").style.left = leftPosition;
-    
+        top: topPosition
+
+     }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
+
+     $("#shape-div").animate({
+
+        left: leftPosition
+
+     }, { duration: ((500 + Math.floor(Math.random()*1500))), queue: false });
 }
 
 function startGame () {
