@@ -6,6 +6,8 @@ let height = 0;
 
 let width = 0;
 
+let playCount = 0;
+
 function setRandomBackgroundColor () {
 
     let letters = "0123456789ABCDEF";
@@ -106,6 +108,8 @@ function startTimer() {
 
 function endTimer() {
 
+    playCount ++;
+
     let endTime = new Date ();
 
     let timeDiff = endTime - startTime;
@@ -115,6 +119,10 @@ function endTimer() {
     document.getElementById("time-to-click").innerHTML = seconds;
 
     document.getElementById("time-to-click").style.fontWeight = "bold";
+
+    let currentTime = endTime.getHours() + ":" + endTime.getMinutes() + ":" + endTime.getSeconds();
+
+   document.getElementById("results-div-table").innerHTML += "<tr><th>" + playCount + "</th> <th>" + seconds + "</th> <th>" + currentTime + "</th> </tr>";
 
 }
 
